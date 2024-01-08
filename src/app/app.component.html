@@ -1,0 +1,39 @@
+<h1 [ngStyle]="titleStyle">
+  Bienvenue dans la tour des {{ heroes.length }} héros,
+  {{ user
+  name
+
+
+
+
+
+
+  }}g
+</h1>
+<p>
+  <label for="InputUsername"
+    >Votre nom<input
+      id="InputUsername"
+      type="text"
+      name="name"
+      [(ngModel)]="username"
+    />
+  </label>
+</p>
+
+Vos héros :
+<ul>
+  <li *ngFor="let hero of heroes">
+    {{ hero }} <small *ngIf="hero == username">(c'est m oi :))</small>
+  </li>
+</ul>
+
+<label for="InputHeroName"
+  >Héros à ajouter :
+  <input
+    type="text"
+    name="nameOfTheHero"
+    id="InputHeroName"
+    [(ngModel)]="heroToAdd"
+/></label>
+<button (click)="addHero()">Ajouter un héros</button>
